@@ -11,13 +11,13 @@ pipeline {
         stage('Run Data Pipeline') {
             steps {
                 // Windows: use bat, Linux: use sh
-                bat 'python scripts\process_data.py'
+                bat 'python scripts\\process_data.py'
             }
         }
 
         stage('Display Output') {
             steps {
-                bat 'type data\output.txt'
+                bat 'type data\\output.txt'
             }
         }
     }
